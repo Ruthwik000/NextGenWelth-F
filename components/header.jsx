@@ -8,6 +8,7 @@ import Image from "next/image";
 import { SignedIn, SignedOut, SignInButton, UserButton, useUser } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
 import { Logo } from "./ui/logo";
+import ChatBot from "./chat/chat-bot";
 
 const Header = () => {
   const { isLoaded, user } = useUser();
@@ -62,7 +63,9 @@ const HeaderClient = ({ isLoaded, user }) => {
   );
 
   return (
-    <header className={headerClass}>
+    <>
+      <ChatBot />
+      <header className={headerClass}>
       <div className={bgClass}></div>
       <nav className="container mx-auto px-4 py-3 flex items-center justify-between relative">
         <Link href="/" className="relative z-10">
@@ -126,7 +129,18 @@ const HeaderClient = ({ isLoaded, user }) => {
             </div>
           </SignedOut>
 
-          {/* Chat button temporarily removed to fix infinite loop issue */}
+          {/* Chat button for all users - Only render on client side */}
+          {mounted && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-white hover:bg-primary/20 relative transition-all duration-300"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-chat'))}
+              title="Chat with WelthGPT"
+            >
+              <MessageSquare size={20} className="text-primary" />
+            </Button>
+          )}
 
           <SignedIn>
             <UserButton
@@ -168,7 +182,17 @@ const HeaderClient = ({ isLoaded, user }) => {
             <div className="flex justify-center mb-8">
               <Logo className="transition-opacity duration-300" size="large" />
             </div>
-            {/* Chat button temporarily removed to fix infinite loop issue */}
+            {/* Chat button for all users */}
+            <button
+              className="text-2xl font-semibold hover:text-primary transition-colors py-2 text-left flex items-center gap-2"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-chat'));
+              }}
+            >
+              <MessageSquare size={20} className="text-primary" />
+              Chat with WelthGPT
+            </button>
 
             <SignedOut>
               <div className="flex flex-col gap-6 mt-6">
@@ -218,7 +242,16 @@ const HeaderClient = ({ isLoaded, user }) => {
                 >
                   Add Transaction
                 </Link>
-                {/* Chat button temporarily removed to fix infinite loop issue */}
+                <button
+                  className="text-2xl font-semibold hover:text-primary transition-colors py-2 text-left flex items-center gap-2"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    window.dispatchEvent(new CustomEvent('open-chat'));
+                  }}
+                >
+                  <MessageSquare size={20} className="text-primary" />
+                  Chat with WelthGPT
+                </button>
               </div>
             )}
           </div>
@@ -226,6 +259,7 @@ const HeaderClient = ({ isLoaded, user }) => {
       </div>
       )}
     </header>
+    </>
   );
 };
 
