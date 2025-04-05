@@ -11,20 +11,12 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-<<<<<<< HEAD
 } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { updateBudget } from "@/actions/budget";
 import { formatCurrency } from "@/lib/utils";
-=======
-} from "../../../../components/ui/card";
-import { Progress } from "../../../../components/ui/progress";
-import { Button } from "../../../../components/ui/button";
-import { Input } from "../../../../components/ui/input";
-import { updateBudget } from "../../../../actions/budget";
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
 
 export function BudgetProgress({ initialBudget, currentExpenses }) {
   const [isEditing, setIsEditing] = useState(false);

@@ -12,12 +12,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { format, subDays, startOfDay, endOfDay } from "date-fns";
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatCurrency } from "@/lib/utils";
-=======
-import { Card, CardContent, CardHeader, CardTitle } from "../../../../components/ui/card";
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
 import {
   Select,
   SelectContent,

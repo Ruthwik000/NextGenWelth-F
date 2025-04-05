@@ -25,15 +25,9 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-<<<<<<< HEAD
 } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn, formatCurrency } from "@/lib/utils";
-=======
-} from "../../../../components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "../../../../components/ui/card";
-import { cn } from "../../../../lib/utils";
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
 
 // Color palette for pie chart segments
 const COLORS = [

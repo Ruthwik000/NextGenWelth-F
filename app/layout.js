@@ -3,13 +3,8 @@ import "./globals.css";
 import Header from "../components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
-// Import commented out to fix error
-<<<<<<< HEAD
 // import PageTransition from "@/components/ui/page-transition";
 import ChatBot from "@/components/chat/chat-bot";
-=======
-// import PageTransition from "../components/ui/page-transition";
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
 
 const inter = Inter({
   subsets: ["latin"],

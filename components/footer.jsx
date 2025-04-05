@@ -1,21 +1,12 @@
 import React from "react";
 import Link from "next/link";
-<<<<<<< HEAD
+import Image from "next/image";
 import {
   Instagram,
   Twitter,
   Facebook,
   Linkedin,
   Github
-=======
-import Image from "next/image";
-import { 
-  Instagram, 
-  Twitter, 
-  Facebook, 
-  Linkedin, 
-  Github 
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
 } from "lucide-react";
 import { Logo } from "./ui/logo";
 
@@ -32,46 +23,23 @@ const Footer = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[30rem] h-36 rounded-full bg-primary/20 opacity-30 blur-3xl z-0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 lg:gap-16 mb-16">
-          <div>
-            <Link href="/" className="inline-block mb-8">
-              <Logo size="default" className="hover:opacity-90 transition-opacity duration-300" />
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div>
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center gap-2">
-                <Image 
-                  src="/logo.svg" 
-                  alt="NextGen Welth Logo" 
-                  width={32} 
+                <Image
+                  src="/logo.svg"
+                  alt="NextGen Welth Logo"
+                  width={32}
                   height={32}
                   className="w-8 h-8"
                 />
                 <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-cyan-300">NextGen Welth</span>
               </div>
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
             </Link>
             <p className="text-muted-foreground mb-8 max-w-md leading-relaxed">
               NextGenWelth is revolutionizing personal finance with AI-powered insights and intelligent wealth management for the next generation.
             </p>
-<<<<<<< HEAD
-            <div className="flex space-x-5">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110">
-=======
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-cyan-400 transition-colors">
                 <Twitter size={20} />
@@ -86,50 +54,28 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a href="#" className="text-muted-foreground hover:text-cyan-400 transition-colors">
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
                 <Github size={20} />
               </a>
             </div>
           </div>
-<<<<<<< HEAD
 
-          <div className="md:ml-auto md:text-right md:pl-8 lg:pl-16">
-            <h3 className="font-bold text-lg mb-8">Quick Links</h3>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/dashboard" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:-translate-x-1 inline-block">
-=======
-          
           <div>
             <h3 className="font-bold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
                 <Link href="/dashboard" className="text-muted-foreground hover:text-cyan-400 transition-colors">
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
                   Dashboard
                 </Link>
               </li>
               <li>
-<<<<<<< HEAD
-                <Link href="#features" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:-translate-x-1 inline-block">
-=======
                 <Link href="#features" className="text-muted-foreground hover:text-cyan-400 transition-colors">
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
                   Features
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
 
-        <div className="pt-10 mt-4 border-t border-white/10">
-          <div className="flex justify-center items-center py-6">
-            <p className="text-muted-foreground text-sm text-center">
-              © 2025 NextGenWelth. Designed and developed by <span className="text-primary font-medium hover:underline cursor-pointer transition-colors duration-300">G. Ruthwik</span>.
-            </p>
-=======
-        
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm mb-4 md:mb-0">
@@ -146,7 +92,6 @@ const Footer = () => {
                 Cookie Policy
               </a>
             </div>
->>>>>>> 2146296071cff410f9a68ade4e4165fe540a4f66
           </div>
         </div>
       </div>
