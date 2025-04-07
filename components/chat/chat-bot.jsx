@@ -131,7 +131,7 @@ const ChatInput = ({ onSend, isLoading }) => {
 
 const INITIAL_MESSAGE = {
   role: "assistant",
-  content: "Hi there! I'm WelthGPT, your AI financial advisor. How can I help you with your finances today?",
+  content: "Hi there! I&apos;m WelthGPT, your AI financial advisor. How can I help you with your finances today?",
 };
 
 const ChatBot = () => {
@@ -237,13 +237,13 @@ const ChatBot = () => {
           customIntro = 'To get personalized recommendations, please complete your profile setup with your financial information.';
           customAction = 'Visit your profile page to add your financial details.';
         } else if (errorMessage.includes('No financial data')) {
-          customIntro = 'I notice you haven\'t added any financial accounts or transactions yet.';
+          customIntro = 'I notice you haven&apos;t added any financial accounts or transactions yet.';
           customAction = 'To get personalized advice, please add your accounts, income, and expenses in the dashboard.';
         } else if (errorMessage.includes('server') || errorMessage.includes('high demand')) {
           customIntro = 'I apologize, but our AI service is currently experiencing high demand or temporary issues.';
           customAction = 'Please try again in a few moments. Our team is working to ensure smooth operation of the service.';
         } else {
-          customIntro = 'I apologize, but I\'m currently unable to access your financial data.';
+          customIntro = 'I apologize, but I&apos;m currently unable to access your financial data.';
         }
 
         aiResponse = `${customIntro}
@@ -286,7 +286,7 @@ ${customAction ? '' : 'You can also try again later when the system connection i
         ...prev,
         {
           role: "assistant",
-          content: "I'm sorry, I encountered an error. Please try again later.",
+          content: "I&apos;m sorry, I encountered an error. Please try again later.",
         },
       ]);
       setIsLoading(false);
@@ -388,10 +388,10 @@ ${customAction ? '' : 'You can also try again later when the system connection i
                       className="w-full justify-start"
                       onClick={() => {
                         setIsDashboardMode(false);
-                        handleSendMessage("What's my current financial health?");
+                        handleSendMessage("What&apos;s my current financial health?");
                       }}
                     >
-                      What's my current financial health?
+                      What&apos;s my current financial health?
                     </Button>
                     <Button
                       variant="outline"
