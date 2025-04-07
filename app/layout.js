@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 // import PageTransition from "@/components/ui/page-transition";
 import ChatBot from "@/components/chat/chat-bot";
+import { DatabaseStatus } from "@/components/database-status";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
           </main>
           <Toaster richColors position="top-right" />
           <ChatBot />
+          <DatabaseStatus />
         </body>
       </html>
     </ClerkProvider>
