@@ -1,5 +1,5 @@
 // Importing the BackgroundPaths component
-import { BackgroundPaths } from "@/components/ui/background-paths"
+import { BackgroundPaths } from "@/components/ui/background-paths.jsx"
 
 /**
  * HeroDemo component - Displays the main hero section with animated background paths

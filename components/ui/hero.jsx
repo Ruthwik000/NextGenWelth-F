@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { cn } from "../../lib/utils"
 import { Button } from "./button"
 import Link from "next/link"
-import { BackgroundPaths } from "./background-paths"
+import { BackgroundPaths } from "./background-paths.jsx"
 
 const Hero = React.forwardRef(
   (
@@ -71,8 +71,8 @@ const Hero = React.forwardRef(
                     key={index}
                     variant={action.variant || "default"}
                     asChild
-                    className="rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-md 
-                    bg-white/5 hover:bg-white/10 text-white transition-all duration-300 
+                    className="rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-md
+                    bg-white/5 hover:bg-white/10 text-white transition-all duration-300
                     hover:-translate-y-0.5 border border-white/10
                     hover:shadow-lg hover:shadow-white/5"
                   >
@@ -98,4 +98,4 @@ const Hero = React.forwardRef(
 )
 Hero.displayName = "Hero"
 
-export { Hero } 
+export { Hero }
